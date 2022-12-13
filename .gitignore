@@ -1,0 +1,8 @@
+# Virtual env
+venv/
+
+# __pycache__
+__pycache__/
+agricom/__pycache__/
+reporter/__pycache__/
+reporter/migrations/__pycache__/
