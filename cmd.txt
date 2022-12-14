@@ -1,0 +1,9 @@
+Generate GIS Model from Geospatial data (In Countries model) :
+Refer : https://www.youtube.com/watch?v=Gtb3QHS2y3g&list=PL7amXK4vKqATa_KrfQ3_tEF_ywAgAqWeJ&index=5
+
+To get the model & mapping :
+python3 manage.py ogrinspect reporter/data/countries.shp Countries --srid=4326 --mapping --multi
+
+python3 maage.py shell
+from reporter import load_layer
+load_layer.run()
