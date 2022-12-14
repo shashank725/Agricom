@@ -134,3 +134,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# django-leaflet
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (20.5937, 78.9629),
+    'DEFAULT_ZOOM': 5,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 20,
+    # 'SCALE': 'both',
+    'SCALE': 'imperial',
+    'ATTRIBUTION_PREFIX': 'Powered by <a href="http://www.nitdgplug.org">GNU/Linux Users Group, NIT Durgapur</a>',
+}
