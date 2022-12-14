@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'reporter.apps.ReporterConfig',
+    'reporter.apps.ReporterConfig',   #app name
+    'django.contrib.gis',             #for geodjango
+    'leaflet',                        #for django-leaflet
 ]
 
 MIDDLEWARE = [
@@ -76,9 +78,18 @@ WSGI_APPLICATION = 'agricom.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'agricom',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+        'PASSWORD': 'postgres',
+        'PORT': '5432',
     }
 }
 
