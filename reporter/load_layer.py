@@ -1,17 +1,17 @@
 import os
 from django.contrib.gis.utils import LayerMapping
-from .models import Countries
+from .models import Counties
 
-countries_mapping = {
-    'countries' : 'countries',
-    'codes' : 'codes',
-    'city_code' : 'city_CODE',
+countie_mapping = {
+    'counties' : 'Counties',
+    'codes' : 'Codes',
+    'cty_code' : 'Cty_CODE',
     'dis' : 'dis',
     'geom' : 'MULTIPOLYGON',
 }
 
-country_shp = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data/countries.shp'))
+county_shp = os.path .abspath(os.path.join(os.path.dirname(__file__),'data/counties.shp'))
 
 def run(verbose=True):
-    lm = LayerMapping(Countries, country_shp, countries_mapping, transform=False, encoding='iso-8859-1')
-    lm.save(strict=True, verbose=verbose)
+	lm = LayerMapping(Counties, county_shp, countie_mapping, transform= False, encoding='iso-8859-1')
+	lm.save(strict=True,verbose=verbose)

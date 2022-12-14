@@ -10,8 +10,8 @@ class IncidencesAdmin(LeafletGeoAdmin):
     list_display = ('name', 'location')
 
 class CountriesAdmin(LeafletGeoAdmin):
-    list_display = ('countries', 'codes', 'city_code', 'dis', 'geom')
+    list_display = ('counties', 'codes', 'cty_code', 'dis')
 
     
 admin.site.register(Incidences, IncidencesAdmin)
-admin.site.register(Countries, CountriesAdmin)
+admin.site.register(Counties, CountriesAdmin)

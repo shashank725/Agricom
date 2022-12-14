@@ -15,12 +15,12 @@ class Incidences(models.Model):
     # class Meta:
     #     verbose_name_plural = "Incidences"
 
-class Countries(models.Model):
-    countries = models.CharField(max_length=100)
+class Counties(models.Model):
+    counties = models.CharField(max_length=100)
     codes = models.IntegerField()
-    city_code = models.CharField(max_length=100)
-    dis = models.IntegerField()
+    cty_code = models.CharField(max_length=100)
+    dis = models.IntegerField(null=True, blank=True)
     geom = models.MultiPolygonField(srid=4326)
 
     def __str__(self):
-        return self.countries
+        return self.counties
