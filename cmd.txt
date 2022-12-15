@@ -8,3 +8,7 @@ python3 manage.py ogrinspect reporter/data/counties.shp Counties --srid=4326 --m
 python3 manage.py shell
 from reporter import load_layer
 load_layer.run()
+
+
+
+Can edit Spatial data using QGIS

@@ -139,7 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # django-leaflet
 LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (20.5937, 78.9629),
+    'DEFAULT_CENTER': (.023, 36.87),
     'DEFAULT_ZOOM': 5,
     'MIN_ZOOM': 3,
     'MAX_ZOOM': 20,
